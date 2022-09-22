@@ -2,7 +2,7 @@ const { Schema, model } = require("mongoose")
 
 const catSchema = new Schema(
     {
-        title: {
+        name: {
             type: String,
             required: [true, "Cat name required"]
         },
