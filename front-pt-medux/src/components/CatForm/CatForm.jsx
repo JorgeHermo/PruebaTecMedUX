@@ -23,7 +23,7 @@ const CatForm = ({ closeModal, refreshCat }) => {
             .createCat(catData)
             .then(() => {
                 closeModal()
-                refreshCat
+                refreshCat()
             })
             .catch(err => console.error(err))
     }
@@ -38,7 +38,7 @@ const CatForm = ({ closeModal, refreshCat }) => {
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="description">
-                <Form.Label>Descripción</Form.Label>
+                <Form.Label>Description</Form.Label>
                 <Form.Control type="text" value={description} onChange={handleChange} name="description" />
             </Form.Group>
 
@@ -46,7 +46,7 @@ const CatForm = ({ closeModal, refreshCat }) => {
                 <Col>
                     <Form.Group className="mb-3" controlId="breed">
                         <Form.Label>Breed</Form.Label>
-                        <Form.Control type="text" value={inversions} onChange={handleChange} name="breed" />
+                        <Form.Control type="text" value={breed} onChange={handleChange} name="breed" />
                     </Form.Group>
                 </Col>
             </Row>

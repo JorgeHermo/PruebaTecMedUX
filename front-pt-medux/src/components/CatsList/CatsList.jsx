@@ -1,7 +1,7 @@
 import { Col, Row } from 'react-bootstrap'
 import CatCard from '../CatCard/CatCard'
 
-const CatList = (cats) => {
+const CatsList = (cats) => {
 
     return (
         <Row>
@@ -18,4 +18,4 @@ const CatList = (cats) => {
     )
 }
 
-export default CatList
+export default CatsList

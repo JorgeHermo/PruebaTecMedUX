@@ -1,5 +1,5 @@
 const router = require("express").Router();
 
-router.use("/", require('./cat.routes'))
+router.use("/cats", require('./cat.routes'))
 
 module.exports = router;

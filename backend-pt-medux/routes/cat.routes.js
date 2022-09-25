@@ -1,13 +1,12 @@
 const router = require("express").Router()
 
-const { response } = require("express")
 const Cat = require('./../models/Cat.model')
 
 router.get("/getAllCats", (req, res) => {
 
     Cat
         .find()
-        .then(response = res.json(response))
+        .then(response => res.json(response))
         .catch(err => res.status(500).json(err))
 })
 

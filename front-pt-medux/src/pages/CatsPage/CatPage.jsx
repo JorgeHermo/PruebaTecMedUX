@@ -1,5 +1,10 @@
 import { useEffect, useState } from "react"
+import catService from "../../services/cat.services"
 
+import { Container, Modal } from "react-bootstrap"
+import CatsList from "../../components/CatsList/CatsList"
+import CatForm from "../../components/CatForm/CatForm"
+import Loader from "../../components/Loader/Loader"
 
 const CatListPage = () => {
 
@@ -28,7 +33,7 @@ const CatListPage = () => {
                 <h1>Cat galerie <span onClick={openModal}>+</span></h1>
                 <hr />
                 {
-                    cats.length ? <CatList cats={cats} /> : <Loader />
+                    cats.length ? <CatsList cats={cats} /> : <Loader />
                 }
 
             </Container>
@@ -38,7 +43,7 @@ const CatListPage = () => {
                     <Modal.Title>New cat</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <CoasterForm closeModal={closeModal} refreshCoasters={loadCoasters} />
+                    <CatForm closeModal={closeModal} refreshCoasters={loadCats} />
                 </Modal.Body>
             </Modal>
 

@@ -9,7 +9,7 @@ const AppRoutes = () => {
     return (
         <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/galeria" element={<CatListPage />} />
+            <Route path="/galerie" element={<CatListPage />} />
             <Route path="/create" element={<NewCatPage />} />
             <Route path="/details/:cat_id" element={<CatDetails />} />
         </Routes>
